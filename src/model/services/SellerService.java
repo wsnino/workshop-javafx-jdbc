@@ -7,9 +7,9 @@ import model.dao.SellerDao;
 import model.entities.Seller;
 
 public class SellerService {
-	
-	private SellerDao dao = DaoFactory.createSellerDao();
 
+	private SellerDao dao = DaoFactory.createSellerDao();
+	
 	public List<Seller> findAll() {
 		return dao.findAll();
 	}
@@ -21,7 +21,7 @@ public class SellerService {
 		else {
 			dao.update(obj);
 		}
- 	}
+	}
 	
 	public void remove(Seller obj) {
 		dao.deleteById(obj.getId());
